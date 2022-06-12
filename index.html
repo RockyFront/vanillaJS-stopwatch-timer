@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stop Watch</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body class="font-mono">
+
+<section class="page-control ">
+    <div class="menu flex flex-row text-gray-500 w-60">
+        <button class="menu__sw bg-white  p-2 rounded-l w-1/2 hover:bg-blue-200 " onclick="stopWatch()">Stop Watch
+        </button>
+        <button class="menu__timer bg-white p-2 rounded-r w-1/2 border-l-2 hover:bg-blue-200" onclick="timer()">Timer
+        </button>
+    </div>
+    <div class="box bg-amber-300 text-white disp-none" id="stop-watch">
+        <div class="buttons">
+            <button id="setTimer" class="disp-none w-24 h-10 rounded-full bg-green-500">Set</button>
+            <button id="startStopWatch" class=" w-24 h-10 bg-green-500 rounded-full">Start</button>
+            <div class="timerDisplay mx-2 text-gray-500 font-bold rounded-full" id="stopWatchDisplay">
+                00 : 00 : 00
+            </div>
+            <button id="pauseStopWatch" class="disp-none w-24 h-10 rounded-full bg-red-500">Pause
+            </button>
+            <button id="resetTimer" class="w-24 h-10 rounded-full bg-red-500">Reset</button>
+        </div>
+
+    </div>
+
+    <div class="box bg-amber-300 text-white disp-none" id="timer">
+        <button id="startTimer" class=" w-24 h-10 bg-blue-500 rounded-full">Start</button>
+        <div class="timerDisplay mx-2 text-gray-500 font-bold rounded-full" id="timerDisplay" contenteditable>
+            00 : 00 : 00
+        </div>
+        <button id="pauseTimer" class="w-24 h-10 rounded-full bg-gray-500">Pause
+        </button>
+    </div>
+
+    <div class="records">
+        <ol id="record-wrapper" reversed>
+
+        </ol>
+    </div>
+</section>
+<script src="stopWatch.js"></script>
+<script src="timer.js"></script>
+</body>
+</html>
